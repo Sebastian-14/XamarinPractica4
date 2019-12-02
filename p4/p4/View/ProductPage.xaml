@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="p4.View.ProductPage">
+    <StackLayout Margin="20">
+        <Label Text="Código" />
+        <Entry Text="{Binding Path=codigo}"
+               x:Name="EntCodigo"
+               Placeholder="Ingrese código"/>
+        
+        <Label Text="Nombre" />
+        <Entry Text="{Binding Path=descripcion}" 
+               x:Name="EntDescripcion"
+               Placeholder="INgrese nombre" />
+        
+        <Label Text="Precio" />
+        <Entry Text="{Binding Path=precio}"
+               x:Name="EntPrecio"
+               Placeholder="Ingrese precio" />
+        
+        <Label Text="¿Disponible?" />
+        <Switch IsToggled="{Binding Path=vendido}" 
+                x:Name="Switch"/>
+        
+        <Button Text="Guardar" 
+                Clicked="OnSaveButtonClicked" />
+        
+        <Button Text="Delete"
+                Clicked="OnDeleteButtonClicked" />
+        
+        <Button Text="Cancel" 
+                Clicked="OnCancelButtonClicked" />
+        
+    </StackLayout>
+    
+</ContentPage>
